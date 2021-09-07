@@ -1,0 +1,19 @@
+.app {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  background-color: #ececec;
+  transition: 0.2s ease;
+}
+
+.app_dark {
+  background-color: #1f1f25;
+}
+
+// mobile
+@media (max-width: 576px) {
+  .app {
+    font-size: 15px;
+  }
+}

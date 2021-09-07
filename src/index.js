@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/app/app';
+import {BrowserRouter as Router} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import TodoServiceContext from "./components/context/todo-service-context";
+import TodoService from "./services/TodoService";
+import {Provider} from "react-redux";
+import store from "./store/store";
+
+const todoService = new TodoService();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+          <TodoServiceContext.Provider value={todoService}>
+              <Router>
+                  <App />
+              </Router>
+          </TodoServiceContext.Provider>
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

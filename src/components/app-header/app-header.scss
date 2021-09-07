@@ -1,0 +1,179 @@
+.app-header {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  transition: 0.2s ease;
+
+  &__wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 230px;
+  }
+
+  &__nav-item {
+    text-decoration: none;
+    color: black;
+    padding-top: 3px;
+    transition: 0.1s linear;
+
+    &:hover {
+      color: #1a77ff;
+    }
+  }
+
+  &__nav-item_logo {
+    color: #1a77ff;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 0;
+  }
+
+  &__tools {
+    width: 230px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__tools-item {
+    width: 45px;
+  }
+}
+
+.app-header_dark {
+  background-color: #22252a;
+
+  .app-header__nav-item {
+    color: #9a9a9a;
+    transition: 0.1s linear;
+
+    &:hover {
+      color: #418aff;
+    }
+  }
+
+  .app-header__nav-item_logo {
+    color: #418aff;
+  }
+}
+
+.tool {
+  display: flex;
+  justify-content: center;
+
+  &__theme {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #dcdcdc;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  &__theme:hover {
+    width: 45px;
+    height: 45px;
+    transition: height 0.1s linear, width 0.1s linear;
+
+    .tool__theme-switch {
+      width: 100%;
+    }
+  }
+
+  &__theme-switch {
+    float: left;
+    width: 40%;
+    height: 100%;
+    background-color: #565656;
+    transition: width 0.3s cubic-bezier(0, 0.72, 0.48, 0.95);
+  }
+
+  &__flag {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #dcdcdc;
+    cursor: pointer;
+  }
+
+  &__flag:hover {
+    width: 45px;
+    transition-duration: 0.2s;
+  }
+
+  &__flag-hidden {
+    display: none;
+  }
+}
+
+.tool_dark {
+  .tool__theme {
+    box-shadow: 0 0 0 1px #565656;
+    transition: 0.2s ease;
+  }
+
+  .tool__flag {
+    box-shadow: 0 0 0 1px #565656;
+  }
+}
+
+// mobile
+@media (max-width: 576px) {
+  .app-header {
+    &__wrapper {
+      padding: 0 20px;
+      height: 60px;
+    }
+
+    &__nav {
+      width: 50%;
+      gap: 20px;
+    }
+
+    &__nav-item_logo {
+      font-size: 20px;
+      padding-left: 0;
+    }
+
+    &__tools {
+      gap: 5px;
+      width: 50%;
+    }
+  }
+
+  .tool {
+    &__theme {
+      height: 30px;
+      width: 30px;
+    }
+
+    &__theme:hover {
+      height: 30px;
+      width: 30px;
+      .tool__theme-switch {
+        width: 40%;
+      }
+    }
+
+    &__theme-switch {
+      transition: none;
+    }
+
+    &__flag {
+      width: 30px;
+    }
+
+    &__flag:hover {
+      width: 30px;
+    }
+  }
+}
