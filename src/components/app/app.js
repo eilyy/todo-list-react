@@ -24,14 +24,14 @@ const App = (props) => {
     return (
         <div className={props.theme === 'Light' ? "app" : "app app_dark"}>
             <AppHeader/>
-            <Route exact path="/">
+            <Route exact path="/todo-list-react">
                 <Container>
                     <NewTaskForm/>
                     <Filter/>
                     <TasksList/>
                 </Container>
             </Route>
-            <Route path="/contacts" component={Contacts} title="Contacts"/>
+            <Route path="/todo-list-react/contacts" component={Contacts} title="Contacts"/>
         </div>
     );
 }

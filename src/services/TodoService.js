@@ -1,6 +1,6 @@
 export default class TodoService {
     constructor() {
-        this._url = "http://localhost:3000"
+        this._url = "https://my-json-server.typicode.com/eilyy/todo-list-react"
     }
 
     async getResource(url) {
