@@ -17,8 +17,7 @@ export default class TodoService {
         const res = await fetch(`${this._url}/tasks`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'secret-key': '$2b$10$y5D/x18qCFJDhv/2ea3F3eND0dPUS23WmKqYhfrAqTz6dASkTPrN.'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(task)
         });
@@ -44,8 +43,7 @@ export default class TodoService {
         const res = await fetch(`${this._url}/tasks/${taskId}`, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
-                'secret-key': '$2b$10$y5D/x18qCFJDhv/2ea3F3eND0dPUS23WmKqYhfrAqTz6dASkTPrN.'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         });

@@ -8,7 +8,7 @@
   margin: 0 auto 20px;
   padding: 20px;
   background-color: #ffffff;
-  border-top: solid 3px transparent;
+  border-top: solid 3px #ffffff;
   border-bottom: solid 3px transparent;
   transition: 0.2s ease;
 
@@ -99,6 +99,11 @@
 
 .task-item_dark {
   background-color: #30333a;
+
+  .task-item_fav {
+    border-bottom: solid 3px #eed000;
+    transition: linear 0.1s;
+  }
 
   .task-item__text {
     color: #9a9a9a;
