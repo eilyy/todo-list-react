@@ -1,6 +1,6 @@
 export default class TodoService {
     constructor() {
-        this._url = "https://my-json-server.typicode.com/eilyy/todo-list-react"
+        this._url = "https://todo-list-react-db.herokuapp.com"
     }
 
     async getResource(url) {
@@ -17,7 +17,8 @@ export default class TodoService {
         const res = await fetch(`${this._url}/tasks`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'secret-key': '$2b$10$y5D/x18qCFJDhv/2ea3F3eND0dPUS23WmKqYhfrAqTz6dASkTPrN.'
             },
             body: JSON.stringify(task)
         });
@@ -43,7 +44,8 @@ export default class TodoService {
         const res = await fetch(`${this._url}/tasks/${taskId}`, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'secret-key': '$2b$10$y5D/x18qCFJDhv/2ea3F3eND0dPUS23WmKqYhfrAqTz6dASkTPrN.'
             },
             body: JSON.stringify(data)
         });

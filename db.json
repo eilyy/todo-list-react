@@ -1,19 +1,19 @@
 {
   "tasks": [
     {
-      "name": "проснуться",
+      "name": "wake up!",
       "fav": false,
       "done": false,
       "id": 1
     },
     {
-      "name": "вынести мусор",
+      "name": "breakfast time",
       "fav": false,
       "done": false,
       "id": 2
     },
     {
-      "name": "покушать",
+      "name": "learn some react",
       "fav": false,
       "done": false,
       "id": 3

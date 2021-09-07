@@ -36,7 +36,7 @@ const Contacts = (props) => {
                     </a>
                 </div>
             </div>
-            <Link className="contacts__back-btn" to="/">
+            <Link className="contacts__back-btn" to="/todo-list-react">
                 <div className="contacts__back-icon-wrapper">
                     <FontAwesomeIcon className="contacts__back-icon" icon={faChevronLeft}/>
                 </div>

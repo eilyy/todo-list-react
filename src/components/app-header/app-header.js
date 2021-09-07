@@ -35,8 +35,8 @@ class AppHeader extends Component {
             <header className={this.props.theme === 'Light' ? "app-header" : "app-header app-header_dark"}>
                 <div className="container app-header__wrapper">
                     <nav className="app-header__nav">
-                        <Link className="app-header__nav-item app-header__nav-item_logo" to="/">{this.props.lang === 'English' ? 'tododo' : 'тудуду'}</Link>
-                        <Link className="app-header__nav-item" to="/contacts">{this.props.lang === 'English' ? 'Contacts' : 'Контакты'}</Link>
+                        <Link className="app-header__nav-item app-header__nav-item_logo" to="/todo-list-react">{this.props.lang === 'English' ? 'tododo' : 'тудуду'}</Link>
+                        <Link className="app-header__nav-item" to="/todo-list-react/contacts">{this.props.lang === 'English' ? 'Contacts' : 'Контакты'}</Link>
                     </nav>
                     <div className="app-header__tools">
                         <div className={this.props.theme === 'Light' ? "app-header__tools-item tool" : "app-header__tools-item tool tool_dark"}>
