@@ -100,6 +100,7 @@
 
   &__flag {
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     box-shadow: 0 0 0 1px #dcdcdc;
     cursor: pointer;
@@ -107,6 +108,7 @@
 
   &__flag:hover {
     width: 45px;
+    height: 45px;
     transition-duration: 0.2s;
   }
 

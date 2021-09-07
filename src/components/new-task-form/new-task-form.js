@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import withTodoService from "../hoc/with-todo-service";
 import {connect} from "react-redux";
 import {taskPosted} from "../../redux/actions/actions";
@@ -8,6 +8,7 @@ import "./new-task-form.scss"
 
 const mapStateToProps = (state) => {
     return {
+        tasks: state.tasks,
         lang: state.lang,
         theme: state.theme
     }
@@ -18,6 +19,10 @@ const mapDispatchToProps = {
 }
 
 const NewTaskForm = (props) => {
+    useEffect(() => {
+        document.querySelector('#new-task-btn').disabled = props.tasks.length >= 20;
+    }, [props.tasks.length]);
+
     const onPost = async (e) => {
         e.preventDefault();
         const input = document.querySelector('#new-task-input');

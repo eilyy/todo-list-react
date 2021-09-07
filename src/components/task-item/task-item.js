@@ -44,22 +44,25 @@ const TaskItem = (props) => {
 
     return (
         <section className={ "task-item " + (fav ? "task-item_fav " : "") + (props.theme === 'Dark' ? "task-item_dark" : "") }>
-            <div className="task-item__info">
-                <div className="task-item__checkbox" onClick={() => onDone(id)}>
-                    <FontAwesomeIcon className={done ? "task-item__icon task-item__icon-check" : "task-item__icon task-item__icon_hidden"} icon={faCheck}/>
+            <div className="task-item__flex">
+                <div className="task-item__info">
+                    <div className="task-item__checkbox" onClick={() => onDone(id)}>
+                        <FontAwesomeIcon className={done ? "task-item__icon task-item__icon-check" : "task-item__icon task-item__icon_hidden"} icon={faCheck}/>
+                    </div>
+                    <div className="task-item__text-wrapper">
+                        <span className={done ? "task-item__text task-item__text_done" : "task-item__text"} onClick={() => onDone(id)}>{name}</span>
+                    </div>
                 </div>
-                <div className="task-item__text-wrapper">
-                    <span className={done ? "task-item__text task-item__text_done" : "task-item__text"} onClick={() => onDone(id)}>{name}</span>
+                <div className="task-item__options">
+                    <div className="task-item__icon-wrapper">
+                        <FontAwesomeIcon className={fav ? "task-item__icon task-item__icon-fav" : "task-item__icon"} icon={faStar} onClick={() => onFav(id)}/>
+                    </div>
+                    <div className="task-item__icon-wrapper">
+                        <FontAwesomeIcon className="task-item__icon task-item__icon-delete" icon={faTrashAlt} onClick={() => onDelete(id)}/>
+                    </div>
                 </div>
             </div>
-            <div className="task-item__options">
-                <div className="task-item__icon-wrapper">
-                    <FontAwesomeIcon className={fav ? "task-item__icon task-item__icon-fav" : "task-item__icon"} icon={faStar} onClick={() => onFav(id)}/>
-                </div>
-                <div className="task-item__icon-wrapper">
-                    <FontAwesomeIcon className="task-item__icon task-item__icon-delete" icon={faTrashAlt} onClick={() => onDelete(id)}/>
-                </div>
-            </div>
+            <div className="task-item__fav-border"/>
         </section>
     )
 }
