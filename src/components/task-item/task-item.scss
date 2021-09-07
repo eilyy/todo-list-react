@@ -13,6 +13,7 @@
   transition: 0.2s ease;
 
   &_fav {
+    border-top: solid 3px #ffffff;
     border-bottom: solid 3px #eed000;
     transition: linear 0.1s;
   }
@@ -102,6 +103,7 @@
   border-top: solid 3px #30333a;
 
   .task-item_fav {
+    border-top: solid 3px #30333a;
     border-bottom: solid 3px #eed000;
     transition: linear 0.1s;
   }
